@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    @include tipo-1(16);
+    background: $gray;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid $colorBoxS;
+    box-shadow: 3px 3px 4px $colorBoxS, 5px 5px 3px $colorBoxS;
+    border-radius: 4px;
+}
+a {
+    cursor: pointer;
+}
+
+h1 {
+    @include tipo-1(28);
+    @include container;
+    text-transform: uppercase;
+    margin: 6% 0;
+    font-weight: bold;
+    &::before {
+        content: 'pt';
+        width: 24px;
+        height: 24px;
+        color: transparent;
+    };
+    &::after{
+        content: " ";
+        width: 17%;
+        height: 3px;
+        margin-top: 10px;
+        display: block;
+        background: $colorBoxS;
+    }
+}
+p {
+    @include tipo-1(18)
+}

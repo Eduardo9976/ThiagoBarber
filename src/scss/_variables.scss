@@ -1,0 +1,90 @@
+$primaryColor: #2c3e50;
+$white: #fff;
+$gray: #eee;
+$green: #39E80C;
+$red: #C70F15;
+$colorBoxS: rgba(0, 0, 0, 0.5);
+
+$fonte-1: 'PT Mono', monospace;
+$fonte-2: monospace 'PT Mono';
+$fonte-3: 'Aref Ruqaa', serif;
+
+
+
+@function em($pixel, $contexto: 16) {
+    @return $pixel / $contexto + em;
+}
+
+@mixin container {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 10px;
+    // background: $green;
+}
+
+
+@mixin flex($position, $wrap:nowrap) {
+    display: flex;
+    @if $position == s {
+        justify-content: flex-start;
+    } @else if $position == c {
+        justify-content: center;
+    } @else if $position == e {
+        justify-content: flex-end;
+    }
+    flex-wrap: $wrap;
+}
+
+@mixin utils {
+    content: "im";
+    color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat ;
+    margin-right: 12px;
+}
+
+@mixin tipo-1($size, $color: $primaryColor) {
+    font-family: $fonte-1;
+    color: $color;
+    @if $size == 16 {
+        font-size: em(16);
+        line-height: em(30);
+    }
+    @else if $size == 18 {
+        font-size: em(18);
+        line-height: em(30, 18);
+    }
+    @else if $size == 24 {
+        font-size: em(24);
+        line-height: em(30, 24);
+    }
+    @else if $size == 28 {
+        font-size: em(28);
+        line-height: em(30, 28);
+    }
+}
+@mixin tipo-2($size, $color: $primaryColor) {
+    font-family: $fonte-2;
+    color: $color;
+    @if $size == 14 {
+        font-size: em(14);
+        line-height: em(30, 14);
+    }
+    @else if $size == 16 {
+        font-size: em(16);
+        line-height: em(30);
+    }
+}
+
+//Media-queries
+@mixin d($dispositivo) {
+	@if $dispositivo == t {
+		@media only screen and (min-width: 768px) and (max-width: 959px) {
+			@content;
+		}
+	} @else if $dispositivo == m {
+		@media only screen and (max-width: 767px) {
+			@content;	
+		}
+	}
+}
