@@ -1,5 +1,6 @@
 <template>
-    <div class="services">
+    <transition appear>
+        <div class="services">
         <div class="pictureServices1">
             <img src="../../public/imgs/cliente1.png" alt="Foto de corte em cliente">
             <img src="../../public/imgs/cliente2.png" alt="Foto de corte em cliente">
@@ -7,48 +8,66 @@
         <h1>Serviços</h1>
         <div>
             <p>Corte Masculino</p>
-            <span>-R$ 25,00</span>
-        </div>
-        <hr>
-        <br>
-        <div>
-            <p>Barba</p>
-            <span>-R$ 25,00</span>
-        </div>
-        <hr>
-        <br>
-        <div>
-            <p>Barba</p>
-            <span>-R$ 25,00</span>
-        </div>
-        <hr>
-        <br>
-        <div>
-            <p>Barba e Bigode</p>
-            <span>-R$ 25,00</span>
-        </div>
-        <hr>
-        <br>
-        <div>
-            <p>Penteado Afro</p>
-            <span>-R$ 25,00</span>
+            <span>-R$ 20,00</span>
         </div>
         <hr>
         <br>
         <div>
             <p>Corte Infantil</p>
-            <span>-R$ 25,00</span>
+            <span>-R$ 15,00</span>
         </div>
         <hr>
         <br>
         <div>
-            <p>Penteados</p>
-            <span>-R$ 25,00</span>
+            <p>Barba</p>
+            <span>-R$ 15,00</span>
         </div>
         <hr>
         <br>
         <div>
-            <p>Outros Serviços</p>
+            <p>Penteado Dmil</p>
+            <span>-R$ 15,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Penteado Afro</p>
+            <span>-R$ 10,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Sobrancelha</p>
+            <span>-R$ 10,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Pézinho</p>
+            <span>-R$ 5,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Risco</p>
+            <span>-R$ 5,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Desenho</p>
+            <span>-R$ 10,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Corte + Barba</p>
+            <span>-R$ 35,00</span>
+        </div>
+        <hr>
+        <br>
+        <div>
+            <p>Corte + Sobrancelha</p>
             <span>-R$ 25,00</span>
         </div>
         <hr>
@@ -58,6 +77,7 @@
             <img src="../../public/imgs/cliente4.png" alt="Foto de corte em cliente">
         </div>
     </div>
+    </transition>    
 </template>
 <script>
 export default {
@@ -125,6 +145,21 @@ export default {
             }
         }
     }
+}
+.v-enter-active  {
+  animation: slide 1s;
+  transition: opacity 1s;
+}
+.v-leave-active {
+  animation: slide 1s reverse;
+  transition: opacity 1s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
 }
 
 </style>

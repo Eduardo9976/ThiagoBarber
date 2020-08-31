@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <a  class="sociais" href=" https://instagram.com" target="_blank" ><img src="./../public/imgs/instagram.svg" alt="link Instagram"></a>
+    <a  class="sociais" href="https://www.instagram.com/thiagobarberblack/" target="_blank" ><img src="./../public/imgs/instagram.svg" alt="link Instagram"></a>
     <a  class="sociais social" href=" https://api.whatsapp.com/send?phone=5511988375500" target="_blank" ><img src="./../public/imgs/whatsapp.svg" alt="link Whatsapp"></a>
     <SubHeader />
     <TheHeader />
@@ -53,11 +53,13 @@ export default {
   }
 }
 .social{
-  bottom: 90px;
-  
+  bottom: 90px; 
 }
 
 h1::before {
     background: url("./../public/imgs/postIcon.svg");
+}
+.router-link-exact-active {
+  background: $colorBoxS;
 }
 </style>

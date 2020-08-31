@@ -1,6 +1,7 @@
 <template>
-  <div class="sessao">
-    <section>
+  <transition appear> 
+    <div class="sessao">
+      <section>
           <div class="mainText">
               <h1>Qualidade existe quando se atenta aos mínimos detalhes.</h1>
               <p>Somos uma Barbearia que vai além de um corte de cabelo ou barba, criamos uma experiência única para nossos clientes. </p>
@@ -17,8 +18,9 @@
               </div>
               <router-link to="/servicos"> Conheça os nossos serviços </router-link>
               <router-link to="/agendamento"> Agende seu horário </router-link>
-    </section>
-  </div>  
+      </section>
+    </div>  
+  </transition>  
 </template>
 
 <script>
@@ -81,6 +83,12 @@ a {
     &:hover {
       background: $colorBoxS;
     }
-  
+}
+
+.v-enter, .v-leave-to {
+  transform: scale(0);
+}
+.v-enter-active, .v-leave-active {
+  transition: transform 1s;
 }
 </style>

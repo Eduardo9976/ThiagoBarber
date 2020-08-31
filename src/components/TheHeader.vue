@@ -1,5 +1,6 @@
 <template>
-    <header>
+    <transition appear>
+        <header>
         <nav class="container">
             <ul>
                 <li>  <router-link to="/servicos"> Serviços </router-link> </li>
@@ -11,6 +12,7 @@
             <router-link to="/"> <img src="../../public/imgs/logo.svg" alt="Logotipo" class="logo"> </router-link>
         </div>
     </header>
+    </transition>    
 </template>
 <script>
 export default {
@@ -75,5 +77,28 @@ nav a {
     &:hover {
       background: $colorBoxS;
     }
+}
+
+li:nth-child(2) {
+    background: $primaryColor;
+    border-radius: 4px;
+    font-size: em(18);
+    text-transform: uppercase;
+}
+
+.v-enter-active  {
+  animation: slide 1s;
+  transition: opacity 1s;
+}
+.v-leave-active {
+  animation: slide 1s reverse;
+  transition: opacity 1s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
 }
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <div class="agendamento">
+  <transition appear>
+      <div class="agendamento">
     <div>
         <h1>Agendamento</h1>
         <p>Agende seu horário com antecedência.</p>
@@ -22,6 +23,7 @@
         <input type="submit" value="Enviar">
     </form>
   </div>
+  </transition>   
 </template>
 <script>
 export default {
@@ -100,6 +102,20 @@ select {
     text-align: center;
     text-align-last: center;
 }
+.v-enter-active  {
+  animation: slide 1s;
+  transition: opacity 1s;
+}
+.v-leave-active {
+  animation: slide 1s reverse;
+  transition: opacity 1s;
+}
 
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
 
 </style>

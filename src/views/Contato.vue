@@ -1,18 +1,19 @@
 <template>
-  <div class="contato">
+ <transition appear>
+    <div class="contato">
       
     <img src="../../public/imgs/homensecuida1.svg" alt="Foto Homem também se cuida" style="width:auto;">
       <div>
         <h1>Contato</h1>
-        <p>R. Antonio José 111 | Rua do Mercado 3M</p>
+        <p>R. Alberto Borges Soveral 60| Rua do Mercado 3M</p>
         <p>+55 11 98837-5500</p>
-        <p>thiago.trop@email.com</p>
+        <p>thiago.marques.enzo@gmail.com</p>
         <p>Terça a Sábado das 9h00 às 20h00</p>
         <router-link to="/servicos"> Conheça os nossos serviços </router-link>
         <router-link to="/agendamento"> Agende seu horário </router-link>
-      </div>
-         
+      </div> 
   </div>
+ </transition>  
 </template>
 <script>
 
@@ -91,6 +92,20 @@ a {
     &:hover {
       background: $colorBoxS;
     }
-  
+}
+.v-enter-active  {
+  animation: slide 1s;
+  transition: opacity 1s;
+}
+.v-leave-active {
+  animation: slide 1s reverse;
+  transition: opacity 1s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
 }
 </style>
