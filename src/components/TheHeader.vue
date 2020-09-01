@@ -84,6 +84,9 @@ li:nth-child(2) {
     border-radius: 4px;
     font-size: em(18);
     text-transform: uppercase;
+    &:hover {
+      transform: scale(1.1);
+    }
 }
 
 .v-enter-active  {

@@ -23,7 +23,6 @@ export default {
             this.horarios.date = new Date()
             this.horarios.now =  this.horarios.date.getHours()
             this.horarios.day =  this.horarios.date.getDay()
-            console.log(this.horarios)
             if(this.horarios.now >= this.horarios.open && this.horarios.day != 0 && this.horarios.now < this.horarios.close) {
                 this.green = true
             }

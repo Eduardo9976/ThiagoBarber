@@ -1,8 +1,11 @@
 <template>
- <transition appear>
+  <transition appear>
     <div class="contato">
-      
-    <img src="../../public/imgs/homensecuida1.svg" alt="Foto Homem também se cuida" style="width:auto;">
+      <img
+        src="../../public/imgs/homensecuida1.svg"
+        alt="Foto Homem também se cuida"
+        style="width:auto;"
+      />
       <div>
         <h1>Contato</h1>
         <p>R. Alberto Borges Soveral 60| Rua do Mercado 3M</p>
@@ -11,21 +14,18 @@
         <p>Terça a Sábado das 9h00 às 20h00</p>
         <router-link to="/servicos"> Conheça os nossos serviços </router-link>
         <router-link to="/agendamento"> Agende seu horário </router-link>
-      </div> 
-  </div>
- </transition>  
+      </div>
+    </div>
+  </transition>
 </template>
 <script>
-
 export default {
   name: "Contato",
-  components: {
-    
-  }
-}
+  components: {},
+};
 </script>
 <style lang="scss" scoped>
-@import '../scss/globais';
+@import "../scss/globais";
 
 .contato {
   @include container;
@@ -35,71 +35,63 @@ export default {
   @include d(m) {
     grid-template-columns: 1fr;
     justify-content: center;
-    img{
-    margin: 0 auto;
+    img {
+      margin: 0 auto;
+    }
   }
-  }
-  
 }
-.infoContactos{
-  
-}
-.infoImg{
-  
-}
-p:nth-child(1){
+p:nth-child(2) {
   &::before {
     background: url("../../public/imgs/place.svg");
     @include utils;
   }
 }
-p:nth-child(2){
+p:nth-child(3) {
   &::before {
     background: url("../../public/imgs/telephone.svg");
     @include utils;
   }
 }
-p:nth-child(3){
+p:nth-child(4) {
   &::before {
     background: url("../../public/imgs/email.svg");
     @include utils;
   }
 }
-p:nth-child(4){
+p:nth-child(5) {
   &::before {
     background: url("../../public/imgs/time.svg");
     @include utils;
   }
 }
 
-
 p {
   font-weight: bold;
   text-transform: uppercase;
 }
 a {
-    @include tipo-1(24, $white);
-    text-align: center;
-    text-transform: uppercase;
-    display: block;
-    cursor: pointer;
-    border: 2px solid $colorBoxS;
-    box-shadow: 3px 3px 4px $colorBoxS, 5px 5px 3px $colorBoxS;
-    margin-top: 10px;
-    padding: 10px;
-    text-decoration: none;
-    background: $primaryColor;
-    &:hover {
-      background: $colorBoxS;
-    }
+  @include tipo-1(24, $white);
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  cursor: pointer;
+  border: 2px solid $colorBoxS;
+  box-shadow: 3px 3px 4px $colorBoxS, 5px 5px 3px $colorBoxS;
+  margin-top: 10px;
+  padding: 10px;
+  text-decoration: none;
+  background: $primaryColor;
+  &:hover {
+    background: $colorBoxS;
+  }
 }
-.v-enter-active  {
-  animation: slide 1s;
-  transition: opacity 1s;
+.v-enter-active {
+  animation: slide 2s;
+  transition: opacity 2s;
 }
 .v-leave-active {
-  animation: slide 1s reverse;
-  transition: opacity 1s;
+  animation: slide 2s reverse;
+  transition: opacity 2s;
 }
 
 @keyframes slide {
